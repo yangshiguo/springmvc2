@@ -1,5 +1,7 @@
 package cap.controller;
 
+import cap.bean.Admin;
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -58,17 +60,42 @@ public class HelloController {
         return map;
     }
 
-    @RequestMapping(value = "sayHi", method = RequestMethod.POST)
-    public String hello(HttpServletRequest request, Model model, @RequestParam("name") String username) {
-        String nameByRequest = request.getParameter("name");
-        model.addAttribute("nameByReuest", nameByRequest);
-        model.addAttribute("username", username);
-        return "result";
-
+    /**
+     * 参数标注为RequestParam就可以直接从表单中获取数据。
+     * @param request
+     * @param model
+     * @param username
+     * @return
+     */
+    @RequestMapping(value = "/sayHi",method = RequestMethod.POST)
+    public String hi(HttpServletRequest request,Model model,@RequestParam("name") String username) {
+        String uname = request.getParameter("name");
+        model.addAttribute("nameByReuest",uname);
+        model.addAttribute("username",username);
+        return "sayHi";
     }
 
     @RequestMapping(value = "/sayHi", method = RequestMethod.GET)
-    public String hello() {
+    public String hi() {
         return "sayHi";
+    }
+
+    @RequestMapping(value ="/hello",method = RequestMethod.GET)
+    public void hello() {
+
+    }
+
+    /**
+     * 这里同时注入进了admin.password 和变量password中
+     * @param admin
+     * @param password
+     * @return
+     */
+    @RequestMapping(value ="/hello",method = RequestMethod.POST)
+    public ModelAndView hello(Admin admin,@RequestParam String password) {
+        ModelAndView modelAndView = new ModelAndView("result2");
+        modelAndView.addObject("admin",admin);
+        modelAndView.addObject("password",password);
+        return modelAndView;
     }
 }

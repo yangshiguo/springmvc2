@@ -1,18 +1,20 @@
 <%--
   Created by IntelliJ IDEA.
   User: liubailin
-  Date: 2018/9/4
-  Time: 11:00
+  Date: 2018/9/5
+  Time: 10:55
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>result</title>
+    <title>hello</title>
 </head>
 <body>
-${nameByReuest}
-<br>
-${username}
+<form action="hello" method="post">
+    <input type="text" name="username"/>
+    <input type="text" name="password"/>
+    <input type="submit" name="submit">
+</form>
 </body>
 </html>
