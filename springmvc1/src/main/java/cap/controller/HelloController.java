@@ -4,6 +4,7 @@ import cap.bean.Admin;
 import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -72,7 +73,7 @@ public class HelloController {
         String uname = request.getParameter("name");
         model.addAttribute("nameByReuest",uname);
         model.addAttribute("username",username);
-        return "sayHi";
+        return "result";
     }
 
     @RequestMapping(value = "/sayHi", method = RequestMethod.GET)
@@ -96,6 +97,12 @@ public class HelloController {
         ModelAndView modelAndView = new ModelAndView("result2");
         modelAndView.addObject("admin",admin);
         modelAndView.addObject("password",password);
+        return modelAndView;
+    }
+    @RequestMapping(value = "hi/{name}",method = RequestMethod.GET)
+    public ModelAndView hi(@PathVariable("name") String name) {
+        ModelAndView modelAndView = new ModelAndView("welcome");
+        modelAndView.addObject("name",name);
         return modelAndView;
     }
 }

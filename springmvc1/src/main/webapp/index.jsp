@@ -2,7 +2,7 @@
 <html>
 <body>
 <h2>Hello World!</h2>
-<a href="sayHi">访问表单</a>
+<a href="hi/xxxxx">通过@Pathvariable传递参数</a>
 <a href="sayHi">访问表单1</a>
 <a href="hello">访问表单2</a>
 </body>
