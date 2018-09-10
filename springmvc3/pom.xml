@@ -3,22 +3,19 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>springmvc1</artifactId>
+        <artifactId>springmvc2</artifactId>
         <groupId>cn.edu.cap</groupId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../springmvc1/pom.xml</relativePath>
+        <relativePath>../springmvc2/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>springmvc2</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>springmvc3</artifactId>
+    <packaging>war</packaging>
 
-    <name>springmvc2 Maven Webapp</name>
+    <name>springmvc3 Maven Webapp</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
-    <modules>
-        <module>../springmvc3</module>
-    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -87,8 +84,9 @@
 
     </dependencies>
 
+
     <build>
-        <finalName>springmvc2</finalName>
+        <finalName>springmvc3</finalName>
         <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
             <plugins>
                 <plugin>
