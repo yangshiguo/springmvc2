@@ -3,22 +3,19 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>springmvc2</artifactId>
+        <artifactId>springmvc3</artifactId>
         <groupId>cn.edu.cap</groupId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../springmvc2/pom.xml</relativePath>
+        <relativePath>../springmvc3/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>springmvc3</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>springmvc4</artifactId>
+    <packaging>war</packaging>
 
-    <name>springmvc3 Maven Webapp</name>
+    <name>springmvc4 Maven Webapp</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
-    <modules>
-        <module>../springmvc4</module>
-    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -46,7 +43,6 @@
             <artifactId>spring-core</artifactId>
             <version>3.2.5.RELEASE</version>
         </dependency>
-
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -59,7 +55,6 @@
             <artifactId>spring-web</artifactId>
             <version>3.2.5.RELEASE</version>
         </dependency>
-
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -84,12 +79,15 @@
             <artifactId>spring-beans</artifactId>
             <version>3.2.5.RELEASE</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>4.3.0.Final</version>
+        </dependency>
     </dependencies>
 
-
     <build>
-        <finalName>springmvc3</finalName>
+        <finalName>springmvc4</finalName>
         <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
             <plugins>
                 <plugin>
