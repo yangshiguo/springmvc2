@@ -17,7 +17,6 @@ public class RegisterController {
         modelAndView.addObject(new Admin());
         modelAndView.setViewName("register");
         return modelAndView;
-
     }
 
     @RequestMapping(value = "/register", method = RequestMethod.POST)
