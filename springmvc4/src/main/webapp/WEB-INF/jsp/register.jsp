@@ -39,9 +39,9 @@
             <td><form:errors path="password" cssClass="error"/></td>
         </tr>
         <tr>
-            <td>Customer Email :</td>
-            <td><form:input path="email"/></td>
-            <td><form:errors path="email" cssClass="error"/></td>
+        <td>Customer Email :</td>
+        <td><form:input path="email"/></td>
+        <td><form:errors path="email" cssClass="error"/></td>
         </tr>
         <tr>
             <td colspan="3"><input type="submit" value="Register"/></td>
